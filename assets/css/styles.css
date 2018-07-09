@@ -1,0 +1,20 @@
+.card {
+    float:left;
+    padding-left:auto;
+    padding-right:auto;
+    margin-left: auto;
+    margin-right:auto;
+    opacity: 1
+}
+.container{
+    text-align: center;
+    /* opacity: 0.75; */
+}
+body{
+    background-image: url("https://i0.wp.com/thekoalition.com/images/2015/12/BattlefrontBattleofJakku_Pic03.jpg?w=960&ssl=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-img-top{
+    height:12rem;
+}
