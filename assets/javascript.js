@@ -52,11 +52,18 @@ $(".maul").on("click",function(){
 })
 
 
-$(".btn-startGame").on(click,startGame())
+$("#btn-attack").on("click",startGame)
 
 function startGame(){
-    if (heroPicked == true && villianPicked == true){
-        alert("Welcome! Please play wisely")
+    if (heroPicked == true && villianPicked == true)
+    {
+        var hit = Math.floor(Math.random() * 10) + 1;
+        villianHealth = villianHealth - hit;
+        if (villianHealth <= 0 ){
+            $(".badguy-status").html("You have defeated your opponent!")
+        }
+        // heroHealth --;
+        $(".badguy-status").html("<p>Direct hit, for " + hit + " points! They only have " + villianHealth + " health left!</p>")
     }
 }
 
