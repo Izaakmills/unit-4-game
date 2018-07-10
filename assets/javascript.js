@@ -59,15 +59,16 @@ function startGame(){
     {
         var hit = Math.floor(Math.random() * 10) + 1;
         villianHealth = villianHealth - hit;
-
+        // if health is below zero user wins
         if (villianHealth <= 0 )
         {
             $(".badguy-status").html("You have defeated your opponent!")
-        }
+        } else{
         // heroHealth --;
         $(".goodguy-status").html("You attack and...")
         $(".badguy-status").html("<p>Direct hit, for " + hit + " points! They only have " + villianHealth + " health left!</p>")
-    }
+                }
+}
 }
 
 
