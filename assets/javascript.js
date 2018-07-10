@@ -34,10 +34,11 @@ $(".maul").on("click",function(){
     villianPicked = true
 })
 
-gameStart()
 
-function gameStart(){
-    if (heroPicked && villianPicked){
+startGame()
+
+function startGame(){
+    if (heroPicked == true && villianPicked == true){
         alert("Welcome! Please play wisely")
     }
 }
