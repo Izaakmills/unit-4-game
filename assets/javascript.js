@@ -1,39 +1,40 @@
 
-var heroHealth = 0;
-var villianHealth = 0;
+var heroHealth = 50;
+var villianHealth = 50;
 var heroPicked = false;
 var villianPicked = false;
 
 
 
 $(".obiwan").on("click",function(){
-    $(".yoda").hide()
+    $(".yoda").css("display","none")
     heroPicked = true
 })
 
 $(".yoda").on("click",function(){
-    $(".obiwan").hide()
-    heroPicked = True
+    $(".obiwan").css("display","none")
+    heroPicked = true
 })
 
 $(".jarjar").on("click",function(){
-    $(".jabba").hide()
-    $(".maul").hide()
+    $(".jabba").css("display","none")
+    $(".maul").css("display","none")
     villianPicked = true
 })
 
 $(".jabba").on("click",function(){
-    $(".maul").hide()
-    $(".jarjar").hide()
+    $(".maul").css("display","none")
+    $(".jarjar").css("display","none")
     villianPicked = true
 })
 
 $(".maul").on("click",function(){
-    $(".jarjar").hide()
-    $(".jabba").hide()
+    $(".jarjar").css("display","none")
+    $(".jabba").css("display","none")
     villianPicked = true
 })
 
+gameStart()
 
 function gameStart(){
     if (heroPicked && villianPicked){
