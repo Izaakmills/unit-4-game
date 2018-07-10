@@ -1,10 +1,17 @@
 .card {
-    float:left;
+    /* float:left; */
     padding-left:auto;
     padding-right:auto;
     margin-left: auto;
     margin-right:auto;
-    opacity: 1
+    opacity: 1;
+    max-width: 200px;
+}
+.card-body{
+    opacity: .50;
+}
+.jumbotron{
+    opacity: .8;
 }
 .container{
     text-align: center;
@@ -17,4 +24,10 @@ body{
 }
 .card-img-top{
     height:12rem;
+}
+h3{
+    color:white;
+    background: black;
+    padding:50px;
+
 }
