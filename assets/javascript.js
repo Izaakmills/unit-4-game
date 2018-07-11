@@ -20,7 +20,7 @@ $(".yoda").on("click",function(){
     $(".goodguypicker").css("display","none")//hide pick your hero section
     $(".replaceobi").attr("src","https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png")
     $(".obi-text").html("Yoda")
-    $("#btn-attack").hide()
+    $("#btn-attack").show()
     heroPicked = true
     $(".goodguy-status").html("You have chosen Yoda, choose wisely you did.")
 })
@@ -75,7 +75,7 @@ function startGame(){
         if (villianHealth <= 0 )
         {
             $(".badguy-status").html("You have defeated your opponent!")
-            call.resetGame()
+            resetGame()
             $(".goodguy-status").html("Select another hero to play again")
 
         } else{
@@ -90,7 +90,15 @@ function resetGame(){
     heroPicked = false;
     villianPicked = false;
     villianHealth = 50;
-    $("#btn-attack").hide()
+    $(".jarjar-col").css("display","")
+    $(".jabba-col").css("display","")
+    $(".maul-col").css("display","")
+    $(".yoda-col").css("display","")
+    $(".obi-col").css("display","")
+    $(".badguypicker").css("display","")
+    $(".goodguypicker").css("display","")
+    $(".badguy-status").html("")
+    $(".goodguy-status").html("pick another hero to play again")
 };
 
 
