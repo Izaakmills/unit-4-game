@@ -7,10 +7,14 @@
     opacity: 1;
     max-width: 200px;
 }
-
+.lead{
+    padding: 20px;
+}
 .jumbotron{
     opacity: .8;
+    padding: 50px;
 }
+
 .container{
     text-align: center;
     /* opacity: 0.75; */

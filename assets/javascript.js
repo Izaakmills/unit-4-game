@@ -71,4 +71,8 @@ function startGame(){
 }
 }
 
+function resetGame(){
+    
+}
+
 
