@@ -31,7 +31,7 @@ $(".jarjar").on("click",function(){
     $(".maul-col").css("display","none")
     $(".badguypicker").css("display","none")
     $(".yoda-col").css("display","")
-    $(".yoda-text").html("jajar")
+    $("#yoda-text").html("jajar")
     $(".badguy-status").html("<br><p>You chose to fight jarjar, interesting</p>")
     $(".replaceyoda").attr("src","https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg/revision/latest?cb=20080303052132")
     // $(".yoda-col").css("display","")
@@ -57,7 +57,7 @@ $(".maul").on("click",function(){
     $(".maul-col").css("display","none")
     $(".badguypicker").css("display","none")
     $(".yoda-col").css("display","")
-    $(".yoda-text").html("Darth Maul")
+    $("#yoda-text").html("Darth Maul")
     $(".badguy-status").html("<p>You chose to fight Darth Maul, interesting</p>")
     $(".replaceyoda").attr("src","https://www.sideshowtoy.com/wp-content/uploads/2015/10/star-wars-darth-maul-sixth-scale-feature-100156.jpg")
     villianPicked = true
@@ -99,6 +99,11 @@ function resetGame(){
     $(".goodguypicker").css("display","")
     $(".badguy-status").html("")
     $(".goodguy-status").html("pick another hero to play again")
+    $(".replaceyoda").attr("src","https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png")
+    $("#yoda-text").html("Yoda")
+    $(".replaceobi").attr("src","https://nerdist.com/wp-content/uploads/2017/12/download.jpg")
+    $(".obi-text").html("Obi Wan")
+
 };
 
 
