@@ -7,11 +7,12 @@ var villianPicked = false;
 $("#btn-attack").hide()
 $(".goodguy-status").hide()
 $(".badguy-status").hide()
-
+$(".villians").hide()
 
 // selects users player and villian for game
 $(".obiwan").on("click",function(){
     if (!heroPicked){
+    $(".villians").show()
     $(".intro-text").css("display","none")
     $(".yoda-col").css("display","none")
     $(".goodguypicker").css("display","none")
@@ -23,6 +24,7 @@ $(".obiwan").on("click",function(){
 
 $(".yoda").on("click",function(){
     if (!heroPicked){
+    $(".villians").show()
     $(".intro-text").css("display","none")
     $(".yoda-col").css("display","none") //hide yoda section and trasnplant over to obi wan
     $(".goodguypicker").css("display","none")//hide pick your hero section
@@ -128,6 +130,7 @@ function resetGame(){
     $("#yoda-text").html("Yoda")
     $(".replaceobi").attr("src","https://nerdist.com/wp-content/uploads/2017/12/download.jpg")
     $(".obi-text").html("Obi Wan")
+    $(".villians").hide()
 };
 
 

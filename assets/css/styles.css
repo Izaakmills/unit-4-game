@@ -42,8 +42,8 @@ p{
     margin:0;
 }
 .goodguy-status, .badguy-status {
-    color:white;
-    opacity: .7;
+    color:black;
+    /* opacity: .5; */
     max-width: 200px;
 }
 /* img:hover{
