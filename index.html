@@ -14,75 +14,86 @@
 </head>
 
 <body>
-        <div class="jumbotron">
-            <h1 class="display-4">Star Wars RPG!</h1>
-            <p class="lead">Lets play a simple role playing game using star wars characters, select your character and hit play!</p>
-            <!-- <button type="button" id="restart" class="btn btn-primary">Play Again</button> -->
-            <p class="lead goodguy-status">Select Characters to begin</p>
+    //jumbotron with into text
+    <div class="jumbotron">
+        <h1 class="display-4">Star Wars RPG!</h1>
+        <p class="lead intro-text">Lets play a simple role playing game using star wars characters, select your character and hit play!</p>
+    </div>
+
+    <!-- gameplay section -->
+    <div class = "container">
+        <div class = "row">
+            <div class="col-sm-5 col-md-12">
+                <p class="lead goodguy-status">Select Characters to begin</p>
+            </div>
+            <div class="col-sm-2 col-md-12">
                 <button type="button" id="btn-attack" class="btn btn-primary">Attack!</button>
+            </div>
+            <div class="col-sm-5 col-md-12">
                 <p class="lead badguy-status"></p>
-        </div>
-    <div class="container">
-        <!-- character set 1 good guys -->
-        <div class="row">
-            <div class="col-sm-12 goodguypicker">
-                <h3>Pick your Hero</h3>
             </div>
         </div>
-        <div class="row">
-            <div id="obiwan" class="col-sm-6 obiwan-col">
-                <div class="card obiwan">
-                    <img class="card-img-top replaceobi" src="https://nerdist.com/wp-content/uploads/2017/12/download.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text obi-text">Obie Wan</p>
+            <!-- character set 1 good guys -->
+            <div class="row">
+                <div class="col-sm-12 goodguypicker">
+                    <h3>Pick your Hero</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div id="obiwan" class="col-sm-6 obiwan-col">
+                    <div class="card obiwan">
+                        <img class="card-img-top replaceobi" src="https://nerdist.com/wp-content/uploads/2017/12/download.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text obi-text">Obie Wan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 yoda-col">
+                    <div class="card yoda">
+                        <img class="card-img-top replaceyoda" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text" id="yoda-text">Yoda</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 yoda-col">
-                <div class="card yoda">
-                    <img class="card-img-top replaceyoda" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text" id="yoda-text">Yoda</p>
-                    </div>
+            <!-- character set two bad guys -->
+            <div class="row">
+                <div class="col-sm-12 badguypicker">
+                    <h3>Pick your Opponent</h3>
                 </div>
             </div>
-        </div>
-        <!-- character set two bad guys -->
-        <div class="row">
-            <div class="col-sm-12 badguypicker">
-                <h3>Pick your Opponent</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 jarjar-col">
-                <div class="card jarjar">
-                    <img class="card-img-top" src="https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg/revision/latest?cb=20080303052132"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">JarJar Binks</p>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 jarjar-col">
+                    <div class="card jarjar">
+                        <img class="card-img-top" src="https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg/revision/latest?cb=20080303052132"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">JarJar Binks</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 jabba-col">
-                <div class="card jabba">
-                    <img class="card-img-top" src="http://www2.pictures.zimbio.com/mp/qAXmGpKrxaRl.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Jabba the Hut</p>
+                <div class="col-sm-6 col-md-4 jabba-col">
+                    <div class="card jabba">
+                        <img class="card-img-top" src="http://www2.pictures.zimbio.com/mp/qAXmGpKrxaRl.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Jabba the Hut</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 maul-col">
-                <div class="card maul">
-                    <img class="card-img-top" src="https://www.sideshowtoy.com/wp-content/uploads/2015/10/star-wars-darth-maul-sixth-scale-feature-100156.jpg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Darth Maul</p>
+                <div class="col-sm-6 col-md-4 maul-col">
+                    <div class="card maul">
+                        <img class="card-img-top" src="https://www.sideshowtoy.com/wp-content/uploads/2015/10/star-wars-darth-maul-sixth-scale-feature-100156.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Darth Maul</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        <!-- container tag -->
+            <!-- container tag -->
     </div>
     <script src="./assets/javascript.js" async defer></script>
 </body>

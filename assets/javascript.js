@@ -9,6 +9,7 @@ $("#btn-attack").hide()
 // selects users player and villian for game
 $(".obiwan").on("click",function(){
     if (!heroPicked){
+    $(".intro-text").css("display","none")
     $(".yoda-col").css("display","none")
     $(".goodguypicker").css("display","none")
     $("#btn-attack").show()
@@ -19,6 +20,7 @@ $(".obiwan").on("click",function(){
 
 $(".yoda").on("click",function(){
     if (!heroPicked){
+    $(".intro-text").css("display","none")
     $(".yoda-col").css("display","none") //hide yoda section and trasnplant over to obi wan
     $(".goodguypicker").css("display","none")//hide pick your hero section
     $(".replaceobi").attr("src","https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png")
@@ -73,14 +75,15 @@ $(".maul").on("click",function(){
     }
 })
 
+$("#btn-attack").on("click",attack)
 
-$("#btn-attack").on("click",startGame)
-
-function startGame(){
+function attack(){
     if (heroPicked == true && villianPicked == true)
     {
-        var hit = Math.floor(Math.random() * 10) + 1;
-        villianHealth = villianHealth - hit;
+        var hit1 = Math.floor(Math.random() * 10) + 1; //good guy hit point calc
+        var hit2 = Math.floor(Math.random() * 10) + 1; // villian hit point calc
+        villianHealth = villianHealth - hit1;
+        heroHealth = heroHealth - hit2;
         // if health is below zero user wins
         if (villianHealth <= 0 )
         {
@@ -88,11 +91,12 @@ function startGame(){
             resetGame()
             $(".goodguy-status").html("Select another hero to play again")
 
-        } else{
+        } else 
+        {
         // heroHealth --;
-        $(".goodguy-status").html("You attack and...")
-        $(".badguy-status").html("<p>Direct hit, for " + hit + " points! They only have " + villianHealth + " health left!</p>")
-                }
+        $(".goodguy-status").html("You attack and hit your opponent for " + hit1 +" damage points!")
+        $(".badguy-status").html("<p>Your opponent strikes back for "  + hit2 + " damage points</p>")
+        }
 };
 };
 

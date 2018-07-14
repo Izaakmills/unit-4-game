@@ -26,7 +26,10 @@ body{
 .card-img-top{
     height:12rem;
 }
-
+.card-body{
+    padding:10px;
+    text-align: center;
+}
 h3{
     color:white;
     background: black;
@@ -34,6 +37,13 @@ h3{
     opacity: .6;
     margin-left: auto;
     margin-right:auto;
+}
+p{
+    margin:0;
+}
+.goodguy-status, .badguy-status {
+    background:white;
+    background-blend-mode: lighten;
 }
 /* img:hover{
     animation: shake 0.5s;
