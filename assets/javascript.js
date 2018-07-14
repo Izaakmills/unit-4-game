@@ -5,6 +5,9 @@ var heroPicked = false;
 var villianPicked = false;
 
 $("#btn-attack").hide()
+$(".goodguy-status").hide()
+$(".badguy-status").hide()
+
 
 // selects users player and villian for game
 $(".obiwan").on("click",function(){
@@ -80,6 +83,8 @@ $("#btn-attack").on("click",attack)
 function attack(){
     if (heroPicked == true && villianPicked == true)
     {
+        $(".goodguy-status").show()
+        $(".badguy-status").show()
         var hit1 = Math.floor(Math.random() * 10) + 1; //good guy hit point calc
         var hit2 = Math.floor(Math.random() * 10) + 1; // villian hit point calc
         villianHealth = villianHealth - hit1;
@@ -104,6 +109,7 @@ function resetGame(){
     heroPicked = false;
     villianPicked = false;
     villianHealth = 50;
+    heroHealth = 50;
     $(".jarjar-col").css("display","")
     $(".jabba-col").css("display","")
     $(".maul-col").css("display","")
@@ -111,13 +117,17 @@ function resetGame(){
     $(".obi-col").css("display","")
     $(".badguypicker").css("display","")
     $(".goodguypicker").css("display","")
+    $(".goodguy-status").html("")
     $(".badguy-status").html("")
-    $(".goodguy-status").html("pick another hero to play again")
+    $(".goodguy-status").hide()
+    $(".badguy-status").hide()
+    $("#btn-attack").hide()
+    $(".intro-text").show()
+    $(".intro-text").html("Pick another hero to play again")
     $(".replaceyoda").attr("src","https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png")
     $("#yoda-text").html("Yoda")
     $(".replaceobi").attr("src","https://nerdist.com/wp-content/uploads/2017/12/download.jpg")
     $(".obi-text").html("Obi Wan")
-
 };
 
 

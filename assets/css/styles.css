@@ -42,8 +42,9 @@ p{
     margin:0;
 }
 .goodguy-status, .badguy-status {
-    background:white;
-    background-blend-mode: lighten;
+    color:white;
+    opacity: .7;
+    max-width: 200px;
 }
 /* img:hover{
     animation: shake 0.5s;
