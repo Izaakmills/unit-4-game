@@ -8,14 +8,17 @@ $("#btn-attack").hide()
 
 // selects users player and villian for game
 $(".obiwan").on("click",function(){
+    if (!heroPicked){
     $(".yoda-col").css("display","none")
     $(".goodguypicker").css("display","none")
     $("#btn-attack").show()
     heroPicked = true
     $(".goodguy-status").html("You have chosen Obi Wan, wise choice.")
+    }
 })
 
 $(".yoda").on("click",function(){
+    if (!heroPicked){
     $(".yoda-col").css("display","none") //hide yoda section and trasnplant over to obi wan
     $(".goodguypicker").css("display","none")//hide pick your hero section
     $(".replaceobi").attr("src","https://upload.wikimedia.org/wikipedia/en/thumb/6/6f/Yoda_Attack_of_the_Clones.png/170px-Yoda_Attack_of_the_Clones.png")
@@ -23,9 +26,11 @@ $(".yoda").on("click",function(){
     $("#btn-attack").show()
     heroPicked = true
     $(".goodguy-status").html("You have chosen Yoda, choose wisely you did.")
+    }
 })
 // villian entries
 $(".jarjar").on("click",function(){
+    if (!villianPicked){
     $(".jarjar-col").css("display","none");
     $(".jabba-col").css("display","none")
     $(".maul-col").css("display","none")
@@ -36,9 +41,11 @@ $(".jarjar").on("click",function(){
     $(".replaceyoda").attr("src","https://vignette.wikia.nocookie.net/starwars/images/d/d2/Jar_Jar_aotc.jpg/revision/latest?cb=20080303052132")
     // $(".yoda-col").css("display","")
     villianPicked = true
+    }
 })
 
 $(".jabba").on("click",function(){
+    if (!villianPicked){
     $(".maul-col").css("display","none");
     $(".jarjar-col").css("display","none");
     $(".jabba-col").css("display","none");
@@ -49,9 +56,11 @@ $(".jabba").on("click",function(){
     $(".replaceyoda").attr("src","http://www2.pictures.zimbio.com/mp/qAXmGpKrxaRl.jpg");
     $("#yoda-text").html("Jabba");
     villianPicked = true
+    }
 })
 
 $(".maul").on("click",function(){
+    if (!villianPicked){
     $(".jarjar-col").css("display","none")
     $(".jabba-col").css("display","none")
     $(".maul-col").css("display","none")
@@ -61,6 +70,7 @@ $(".maul").on("click",function(){
     $(".badguy-status").html("<p>You chose to fight Darth Maul, interesting</p>")
     $(".replaceyoda").attr("src","https://www.sideshowtoy.com/wp-content/uploads/2015/10/star-wars-darth-maul-sixth-scale-feature-100156.jpg")
     villianPicked = true
+    }
 })
 
 
